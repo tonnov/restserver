@@ -73,7 +73,8 @@ const usuariosPost = async (req, res = response) => {
 
 const usuariosDelete = async (req, res = response) => {
     const { id } = req.params;
-    // console.log(req.params);
+    
+    // const userAuth = req.userAuth;
 
     // const usuario = await Usuario.findByIdAndDelete( id );
     const usuario = await Usuario.findByIdAndUpdate( id, {estado: false } );
@@ -90,7 +91,6 @@ const usuariosPatch = (req, res = response) => {
         msg: 'patch API - controller'
     });
 }
-
 
 
 
