@@ -12,6 +12,7 @@ const login = async (req, res = response ) => {
     try {
 
         const usuario =  await Usuario.findOne({ correo });
+        
         if (!usuario) {
             return res.status(400).json({
                 msg: 'Credenciales no validas'
